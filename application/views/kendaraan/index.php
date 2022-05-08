@@ -44,6 +44,7 @@
                     <th scope="col">Warna</th>
                     <th scope="col">Transmisi</th>
                     <th scope="col">Harga</th>
+                    <th scope="col">Gambar Kendaraan</th>
                     <th scope="col">Aksi</th>
                 </tr> 
             </thead>
@@ -60,8 +61,12 @@
                         <td><?= $k['jenis_transmisi']; ?></td>
                         <td><?= "Rp. ".number_format($k['harga_kendaraan']) ." ,-"; ?></td>
                         <td>
-                            <a href="" class="badge badge-success float-right">Edit</a>
+                            <img src="<?= base_url(); ?>assets/img/<?= $k['gambar_kendaraan']; ?>" alt="" width="140">
+                        </td>
+                        <td>
+                            <a href="<?= base_url(); ?>kendaraan/ubah/<?= $k['id_kendaraan']; ?>" class="badge badge-success float-right">Edit</a>
                             <a href="<?= base_url(); ?>kendaraan/hapus/<?= $k['id_kendaraan']; ?>" class="badge badge-danger float-right" onclick="return confirm('Yakin mau dihapus ?'); ">Delete</a>
+                            <a href="<?= base_url(); ?>kendaraan/detail/<?= $k['id_kendaraan']; ?>" class="badge badge-warning float-right">Detail</a>
                         </td>
                     </tr>
              </tbody>

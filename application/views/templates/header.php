@@ -30,6 +30,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url(); ?>pabrikan">Data Pabrikan kendaraan</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url(); ?>login/logout_process">Logout</a>
+                </li>
                 </ul>
             </div>
         </nav>
